@@ -34,7 +34,7 @@
                  this.scrollToBottom();
 			},
 			messages(messages) {
-                this.scrollTopBottom();
+                this.scrollToBottom();
 			}
 		}
 	}

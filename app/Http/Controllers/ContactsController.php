@@ -35,7 +35,7 @@ class ContactsController extends Controller
        $messages = Message::where('from', $id)->orWhere('to', $id)->get();
 
        $messages = Message::where(function($q) use ($id){
-       	$q->where('from', auth()->id);
+       	$q->where('from', auth()->id());
        	$q->where('to', $id);
        })->orWhere(function($q) use ($id) {
        	$q->where('from', 'id');
